@@ -29,7 +29,7 @@
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300;
+    @apply bg-gradient-to-br from-white via-slate-50 to-slate-100 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-slate-200/50;
   }
 }
 
