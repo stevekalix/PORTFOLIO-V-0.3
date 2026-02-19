@@ -2,7 +2,7 @@ import { FaGraduationCap, FaLightbulb, FaRocket } from 'react-icons/fa'
 
 const About = () => {
   return (
-    <section id="about" className="section-container bg-white">
+    <section id="about" className="section-container bg-gradient-to-br from-gray-50 to-primary-50">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
           <span className="gradient-text">About Me</span>

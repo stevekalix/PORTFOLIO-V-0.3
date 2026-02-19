@@ -92,13 +92,14 @@ const Hero = () => {
           <div className="flex justify-center md:justify-end animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
               {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-400 to-blue-400 opacity-20 blur-2xl animate-pulse"></div>
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary-500/30 to-blue-500/30 blur-xl"></div>
-              
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-400 to-blue-400 opacity-20 blur-2xl animate-pulse"></div>
+              <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-primary-500/30 to-blue-500/30 blur-xl"></div>
+
               {/* Photo container */}
               <div className="relative z-10">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl bg-gradient-to-br from-primary-400 to-blue-500 p-1">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-800">
+                {/* Use a rounded rectangle so the full photo is visible, and object-cover to fill without gaps */}
+                <div className="w-64 h-64 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl bg-gradient-to-br from-primary-400 to-blue-500 p-1">
+                  <div className="w-full h-full rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center">
                     <img
                       src="/assets/profile-photo.png"
                       alt="Manikandan S - Full-Stack Developer"

@@ -48,7 +48,7 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="section-container bg-white">
+    <section id="projects" className="section-container bg-gradient-to-br from-gray-50 to-primary-50">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
         <span className="gradient-text">Featured Projects</span>
       </h2>
