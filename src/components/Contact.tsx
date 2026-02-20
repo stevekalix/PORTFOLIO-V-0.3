@@ -1,4 +1,4 @@
-import { FaEnvelope, FaGithub, FaHandshake } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaHandshake, FaLinkedin } from 'react-icons/fa'
 
 const Contact = () => {
   const contactMethods = [
@@ -16,6 +16,13 @@ const Contact = () => {
       href: 'https://github.com/stevekalix',
       color: 'text-gray-800',
     },
+    {
+      icon: <FaLinkedin />,
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/manikandan-s-133179364',
+      href: 'https://www.linkedin.com/in/manikandan-s-133179364/',
+      color: 'text-blue-600',
+    },
   ]
 
   return (
@@ -31,7 +38,7 @@ const Contact = () => {
           to be part of your visions. Feel free to reach out!
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {contactMethods.map((method, index) => (
             <a
               key={index}
@@ -54,6 +61,7 @@ const Contact = () => {
               </div>
             </a>
           ))}
+
         </div>
         
         <div className="bg-gradient-to-br from-white to-primary-50 rounded-2xl p-8 shadow-xl border border-primary-100">
@@ -69,11 +77,6 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-gray-600">
-            © {new Date().getFullYear()} <span className="font-semibold text-gray-800">Manikandan S</span>. All rights reserved.
-          </p>
-        </div>
       </div>
     </section>
   )

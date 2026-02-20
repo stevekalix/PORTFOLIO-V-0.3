@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaLightbulb, FaRocket } from 'react-icons/fa'
+import { FaGraduationCap, FaLightbulb, FaRocket, FaServer, FaBrain } from 'react-icons/fa'
 
 const About = () => {
   return (
@@ -8,7 +8,7 @@ const About = () => {
           <span className="gradient-text">About Me</span>
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-primary-400 mx-auto mb-12 rounded-full"></div>
-        
+
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="space-y-6">
             <div className="flex items-start gap-4">
@@ -31,9 +31,30 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Passion</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  I specialize in building robust full-stack web applications using Java, Spring Boot, 
-                  React, and MySQL. I enjoy turning ideas into functional projects.
+                  I specialize in building robust full-stack web applications using Java, Spring Boot,
+                  React, and MySQL. I'm also passionate about DevOps practices — containerization with
+                  <span className="font-semibold text-primary-600"> Docker</span>, orchestration with
+                  <span className="font-semibold text-primary-600"> Kubernetes</span>, CI/CD automation,
+                  and infrastructure-as-code (Terraform). I enjoy automating workflows, improving
+                  deployment reliability, and learning cloud-native architectures.
                 </p>
+
+                <p className="text-gray-700 leading-relaxed mt-3">
+                  I also build cross-platform mobile apps using <span className="font-semibold text-primary-600">Dart</span> and
+                  <span className="font-semibold text-primary-600"> Flutter</span>. Check out the
+                  <a href="#projects" className="font-semibold text-primary-600 hover:underline ml-1"> Travel App</a> in the Projects section.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mt-3">
+                  I also have strong problem-solving skills and regularly practice algorithmic challenges on
+                  <a
+                    href="https://leetcode.com/u/Manikandan334/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-primary-600 hover:underline ml-1"
+                  >LeetCode</a> to sharpen my skills.
+                </p>
+
               </div>
             </div>
           </div>
@@ -44,17 +65,17 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-gray-800">My Mission</h3>
             </div>
             <p className="text-gray-700 leading-relaxed mb-4">
-              I am eager to contribute to innovative projects, grow as a developer, and collaborate 
+              I am eager to contribute to innovative projects, grow as a developer, and collaborate
               with like-minded professionals.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Whether it's building scalable microservices, creating beautiful user interfaces, or 
+              Whether it's building scalable microservices, creating beautiful user interfaces, or
               solving complex problems, I'm always ready for new challenges.
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-8">
+        <div className="grid md:grid-cols-4 gap-6 mt-8">
           <div className="card text-center hover:scale-105 transition-transform duration-300">
             <div className="text-4xl text-primary-600 mb-3">🚀</div>
             <h4 className="font-semibold text-gray-800 mb-2">Full-Stack Development</h4>
@@ -70,12 +91,33 @@ const About = () => {
             </p>
           </div>
           <div className="card text-center hover:scale-105 transition-transform duration-300">
-            <div className="text-4xl text-primary-600 mb-3">💡</div>
-            <h4 className="font-semibold text-gray-800 mb-2">Problem Solving</h4>
+            <div className="flex items-center justify-center text-4xl text-primary-600 mb-3">
+              <FaServer />
+            </div>
+            <h4 className="font-semibold text-gray-800 mb-2">DevOps &amp; CI/CD</h4>
             <p className="text-sm text-gray-600">
-              Creative solutions for complex challenges
+              Containerization, orchestration, automation, and cloud infrastructure
             </p>
           </div>
+
+          <a
+            href="https://leetcode.com/u/Manikandan334/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card text-center hover:scale-105 transition-transform duration-300 group"
+          >
+            <div className="text-4xl text-primary-600 mb-3 flex items-center justify-center">
+              <FaBrain />
+            </div>
+            <h4 className="font-semibold text-gray-800 mb-2">Problem Solving</h4>
+            <p className="text-sm text-gray-600 mb-3">
+              Algorithmic problem solving and competitive programming practice
+            </p>
+            <span className="inline-block px-4 py-2 bg-primary-50 text-primary-600 rounded-full text-sm font-medium">
+              View LeetCode
+            </span>
+          </a>
+
         </div>
       </div>
     </section>

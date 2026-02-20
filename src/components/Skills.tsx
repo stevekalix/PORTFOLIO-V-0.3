@@ -3,9 +3,8 @@ import {
   FaReact,
   FaDocker,
   FaGithub,
-  FaPython,
 } from 'react-icons/fa'
-import { SiSpringboot, SiMysql, SiHtml5, SiNetlify, SiVercel, SiDart } from 'react-icons/si'
+import { SiSpringboot, SiMysql, SiHtml5, SiNetlify, SiVercel, SiDart, SiFlutter } from 'react-icons/si'
 
 interface SkillCategory {
   title: string
@@ -51,12 +50,10 @@ const Skills = () => {
       ],
     },
     {
-      title: 'Additional Skills',
+      title: 'Cross-Platform',
       skills: [
-        { name: 'Python', icon: <FaPython />, color: 'text-yellow-500' },
-        { name: 'NumPy', icon: <FaPython />, color: 'text-blue-600' },
-        { name: 'Pandas', icon: <FaPython />, color: 'text-red-500' },
         { name: 'Dart', icon: <SiDart />, color: 'text-blue-400' },
+        { name: 'Flutter', icon: <SiFlutter />, color: 'text-blue-400' },
       ],
     },
   ]
@@ -78,6 +75,14 @@ const Skills = () => {
             <h3 className="text-xl font-semibold text-gray-800 mb-6 pb-3 border-b border-gray-200 group-hover:border-primary-300 transition-colors">
               {category.title}
             </h3>
+
+            {/* Add a short description specifically for the Cross-Platform category */}
+            {category.title === 'Cross-Platform' && (
+              <p className="text-sm text-gray-600 mb-4">
+                Cross-platform mobile development using Dart & Flutter — building performant, responsive apps for both Android and iOS.
+              </p>
+            )}
+
             <div className="grid grid-cols-2 gap-4">
               {category.skills.map((skill, skillIndex) => (
                 <div

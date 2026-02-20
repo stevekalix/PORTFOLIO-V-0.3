@@ -21,7 +21,7 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full shadow-md mb-6 animate-slide-up border border-white/20">
               <FaCode className="text-primary-400" size={16} />
-              <span className="text-sm font-medium text-white">Third-Year CSE Student</span>
+              <span className="text-sm font-medium text-white">Aspiring DevOps Engineer &amp; Developer</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-slide-up" style={{ animationDelay: '0.1s' }}>
@@ -33,15 +33,12 @@ const Hero = () => {
             <div className="flex items-center justify-center md:justify-start gap-3 mb-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <FaLaptopCode className="text-primary-400" size={24} />
               <h2 className="text-2xl md:text-4xl font-semibold text-white">
-                Java Full-Stack Developer
+                Full-Stack Developer &amp; DevOps Enthusiast
               </h2>
             </div>
 
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              Specializing in building robust full-stack web applications using{' '}
-              <span className="font-semibold text-white">Java</span>,{' '}
-              <span className="font-semibold text-white">Spring Boot</span>, and{' '}
-              <span className="font-semibold text-white">React</span>
+              Building robust full-stack applications with <span className="font-semibold text-white">Java</span>, <span className="font-semibold text-white">Spring Boot</span>, and <span className="font-semibold text-white">React</span>. I also focus on cloud-native and containerized systems using <span className="font-semibold text-white">Docker</span>, <span className="font-semibold text-white">Kubernetes</span>, and automated CI/CD pipelines.
             </p>
 
             {/* Tech Stack Icons */}
@@ -88,26 +85,46 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Right Side - Photo */}
+          {/* Right Side - Developer visual (replaces photo) */}
           <div className="flex justify-center md:justify-end animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
               {/* Decorative rings */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-400 to-blue-400 opacity-20 blur-2xl animate-pulse"></div>
               <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-primary-500/30 to-blue-500/30 blur-xl"></div>
 
-              {/* Photo container */}
+              {/* Developer card container (terminal / code mockup) */}
               <div className="relative z-10">
-                {/* Use a rounded rectangle so the full photo is visible, and object-cover to fill without gaps */}
-                <div className="w-64 h-64 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl bg-gradient-to-br from-primary-400 to-blue-500 p-1">
-                  <div className="w-full h-full rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center">
-                    <img
-                      src="/assets/profile-photo.png"
-                      alt="Manikandan S - Full-Stack Developer"
-                      className="w-full h-full object-cover object-center"
-                    />
+                <div className="w-64 h-64 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 p-1">
+                  <div className="w-full h-full rounded-lg overflow-hidden bg-slate-900 flex flex-col">
+                    {/* Terminal header */}
+                    <div className="bg-black/80 text-green-400 font-mono text-xs p-3 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full" />
+                      <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                      <span className="w-2 h-2 bg-green-400 rounded-full" />
+                      <span className="ml-auto text-gray-400">dev@localhost:~$</span>
+                    </div>
+
+                    {/* Mock terminal content */}
+                    <pre className="flex-1 p-3 text-sm text-gray-200 font-mono overflow-auto">{`# Build frontend
+npm run build
+
+# Run backend
+java -jar backend.jar
+
+# Kubernetes
+kubectl get pods -A`}</pre>
+
+                    {/* Tool badges */}
+                    <div className="p-3 flex flex-wrap gap-2 bg-slate-800">
+                      <span className="text-xs bg-white/5 px-2 py-1 rounded">Docker</span>
+                      <span className="text-xs bg-white/5 px-2 py-1 rounded">Kubernetes</span>
+                      <span className="text-xs bg-white/5 px-2 py-1 rounded">CI/CD</span>
+                      <span className="text-xs bg-white/5 px-2 py-1 rounded">Terraform</span>
+                      <span className="text-xs bg-white/5 px-2 py-1 rounded">AWS</span>
+                    </div>
                   </div>
                 </div>
-                
+
                 {/* Floating badge */}
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-lg">
                   <a
